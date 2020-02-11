@@ -20,19 +20,19 @@
         <div class="rectangle col-12">
             <input class='col-5' type="text" placeholder="width">
             <input class='col-5' type="text" placeholder="height">
-            <button class="btn btn-danger" type="insert">Add Rectangle</button>
+            <button class="btn btn-danger" type="insert" id="addRectangle">Add Rectangle</button>
         </div>
         <div class="square">
             <input class='col-9' type="text" placeholder="side length">
-            <button class='btn btn-warning' type="insert">Add Square</button>
+            <button class='btn btn-warning' type="insert" id="addSquare">Add Square</button>
         </div>
         <div class="circle">
             <input class='col-9' type="text" placeholder="radius">
-            <button class="btn btn-secondary" type="insert">Add Circle</button>
+            <button class="btn btn-secondary" type="insert" id="addCircle">Add Circle</button>
         </div>
         <div class="isoceles-right-triangle">
             <input class='col-9' type="text" placeholder="height">
-            <button class="btn btn-success" type="insert">Add Triangle</button>
+            <button class="btn btn-success" type="insert" id="addTriangle">Add Triangle</button>
         </div>
     </form>
     <div class="row col-5">
@@ -84,6 +84,8 @@
         </span>
     </div>
     <div class="" id="shape-canvas"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
 
