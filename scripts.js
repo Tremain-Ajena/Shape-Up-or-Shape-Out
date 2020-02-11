@@ -2,37 +2,44 @@ let createCircle = $('#addCircle');
 let createTriangle = $('#addTriangle');
 let createSquare = $('#addSquare');
 let createRectangle = $('#addRectangle');
+let shapeContainer = $('#shape-canvas')
 
 class Shapes {
     constructor(height, width) {
         this.height = height;
         this.width = width;
-        let shapeContainer = $('#shape-canvas')
 
     }
     createShape() {
-
+        let help = $('<div class="triangle-up"></div>');
+        let info = $('#inputTri');
+        shapeContainer.append(help);
     }
 };
 
 class Circle extends Shapes {
-    constructor(height, radius) {
-        super(height);
+    constructor(radius) {
         this.radius = radius
     }
-    makeShape() {
-        var cordX = 110;
-        var cordY = 35;
-        var paper = Raphael("sample-1", 200, 75);
-        var circle = paper.circle(cordX, cordY, 25);
-        circle.attr({ fill: "blue" });
-        
-    }
-}
+    createShape() {
+
+        console.log('hey');
+
+
+    };
+};
+
 class Triangle extends Shapes {
-    constructor(height) {
+    constructor(height, ) {
         super(height);
+        
         // all sides are equal, so they're the same sizes
+    }
+    createShape() {
+        let help = $('<div class="triangle-up"></div>');
+        let info = $('#inputTri');
+        shapeContainer.append(help);
+
     }
 }
 class Rectangle extends Shapes {
@@ -40,6 +47,10 @@ class Rectangle extends Shapes {
         super(height);
         this.width = width;
     }
+    createShape() {
+        let rect = $('<canvas id="canvas" width="${`widthRect`}" height="150"></canvas>');
+        shapeContainer.append(rect);
+    };
 }
 class Square extends Shapes {
     constructor(height, sidelength) {
@@ -48,15 +59,40 @@ class Square extends Shapes {
     }
 };
 
-createCircle.click(function () {
-    new Circle();
+
+$('form').click((e) => {
+    e.preventDefault();
 });
-createTriangle.click(function () {
+
+createCircle.click(function (event) {
+    new Circle();
+    createShape();
+});
+createTriangle.click(function (event) {
     new Triangle();
+    // createShape();
+    // createShape();
+    // let help = $('<div class="triangle-up"></div>');
+    // let info = $('#inputTri');
+    // shapeContainer.append(help);
+
+    // this.newSpace = $('.div');
+    // this.newSpace.classList.add('triangle-up');
+    // this.style.borderLeft = info.val();
+    // this.style.borderRight = info.val();
+    // this.style.borderBottom = info.val();
+    // let please = $('<style>.triangle-up { width: 0; height: 0; border-left: info.val() solid transparent;border-right: info.val() solid transparent;border-bottom: info.val() solid #555;}</style>');
+    // help.append(please);
+    
 });
-createRectangle.click(function () {
-    new Rectangle();
+createRectangle.click(function (event) {
+    new Rectangle().createShape();
+    // createShape();
+    console.log('I am supposed to be square');
+
 });
-createCircle.click(function () {
-    new Circle();
+$('#addSquare').click(function (event) {
+    new Square();
+
+    console.log('what');
 });

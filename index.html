@@ -18,20 +18,20 @@
             <h3>Add A Shape!</h3>
         </div>
         <div class="rectangle col-12">
-            <input class='col-5' type="text" placeholder="width">
-            <input class='col-5' type="text" placeholder="height">
+            <input class='col-5' type="text" placeholder="width" id="widthRect">
+            <input class='col-5' type="text" placeholder="height" id="heightRect">
             <button class="btn btn-danger" type="insert" id="addRectangle">Add Rectangle</button>
         </div>
         <div class="square">
             <input class='col-9' type="text" placeholder="side length">
-            <button class='btn btn-warning' type="insert" id="addSquare">Add Square</button>
+            <button class='btn btn-warning' type="button" id="addSquare">Add Square</button>
         </div>
         <div class="circle">
             <input class='col-9' type="text" placeholder="radius">
-            <button class="btn btn-secondary" type="insert" id="addCircle">Add Circle</button>
+            <button class="btn btn-secondary" type="button" id="addCircle">Add Circle</button>
         </div>
         <div class="isoceles-right-triangle">
-            <input class='col-9' type="text" placeholder="height">
+            <input class='col-9' type="text" placeholder="height" id="inputTri">
             <button class="btn btn-success" type="insert" id="addTriangle">Add Triangle</button>
         </div>
     </form>
@@ -83,7 +83,8 @@
             </form>
         </span>
     </div>
-    <div class="" id="shape-canvas"></div>
+    <div class="shapeCanvas" id="shape-canvas"></div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
