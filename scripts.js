@@ -10,12 +10,17 @@ class Shapes {
         this.width = width;
         this.x = x;
         this.y= y;
+        this.shape = $('<div>');
+        // this.shape.addEventListener('click', () => {
+        //     console.log('click');
+        // });
+        // this.shape.addEventListener('dblclick', () => {
+        //     console.log('dblclick');
+        // });
 
     }
     createShape() {
-        let help = $('<div class="triangle-up"></div>');
-        let info = $('#inputTri');
-        shapeContainer.append(help);
+        shapeContainer.append(this.shape);
     }
 };
 
@@ -27,8 +32,8 @@ class Circle extends Shapes {
     createShape() {
         const canvas = document.querySelector('.canvas');
         const c = canvas.getContext('2d');
-        const x= Math.random() * canvas.width;
-        const y= Math.random() * canvas.height;
+        const x= Math.floor(Math.random() * canvas.width);
+        const y= Math.floor(Math.random() * canvas.height);
 
         c.beginPath();
         c.arc(x, y, $('#inputRadius').val(), 0, Math.PI*2);
@@ -48,8 +53,8 @@ class Triangle extends Shapes {
     createShape() {
         const canvas = document.querySelector('.canvas');
         const c = canvas.getContext('2d');
-        const x= Math.random() * canvas.width;
-        const y= Math.random() * canvas.height;
+        const x= Math.floor(Math.random() * canvas.width);
+        const y= Math.floor(Math.random() * canvas.height);
         
         c.fillStyle= 'green';
         c.beginPath();
@@ -73,8 +78,8 @@ class Rectangle extends Shapes {
     createShape() {
         const canvas = document.querySelector('.canvas');
         const c = canvas.getContext('2d');
-        const x= Math.random() * canvas.width;
-        const y= Math.random() * canvas.height;
+        const x= Math.floor(Math.random() * canvas.width);
+        const y= Math.floor(Math.random() * canvas.height);
         
         c.strokeStyle = 'yellow'
         c.lineWidth = '2';
@@ -90,8 +95,8 @@ class Square extends Shapes {
     createShape () {
         const canvas = document.querySelector('.canvas');
         const c = canvas.getContext('2d');
-        const x= Math.random() * canvas.width;
-        const y= Math.random() * canvas.height;
+        const x= Math.floor(Math.random() * canvas.width);
+        const y= Math.floor(Math.random() * canvas.height);
 
         c.beginPath();
         c.lineWidth = '2';
@@ -108,7 +113,7 @@ $('form').click((e) => {
 });
 
 createCircle.click(function (event) {
-    // new Circle();
+    // new Circle($('#inputRadius').val(), 0, Math.PI*2);
     let c1= new Circle();
     c1.createShape();
 });
@@ -130,6 +135,7 @@ createTriangle.click(function (event) {
 
 });
 createRectangle.click(function () {
+    // new Rectangle($('#widthRect').val(), $('#heightRect').val());
    let r1= new Rectangle();
     r1.createShape();
 
