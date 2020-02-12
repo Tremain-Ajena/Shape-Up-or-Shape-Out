@@ -10,6 +10,7 @@ form {
     text-align: left;
 }
 #shape-canvas {
+    margin-top: 1em;
     height: 600px;
     width: 600px;
     background-color: rgba(210, 105, 30, 0.618);
@@ -24,8 +25,10 @@ form {
     align-items: flex-end;
     
 }
-#canvas {
-    background-color: rgb(138, 187, 230);
+.canvas {
+    border: 1px solid black;
+    height: 600px;
+    width: 600px;
 }
 .triangle-up {
 	width: 0;

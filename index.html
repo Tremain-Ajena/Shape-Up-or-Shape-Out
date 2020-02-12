@@ -23,11 +23,11 @@
             <button class="btn btn-danger" type="insert" id="addRectangle">Add Rectangle</button>
         </div>
         <div class="square">
-            <input class='col-9' type="text" placeholder="side length">
+            <input class='col-9' type="text" placeholder="side length" id="sides">
             <button class='btn btn-warning' type="button" id="addSquare">Add Square</button>
         </div>
         <div class="circle">
-            <input class='col-9' type="text" placeholder="radius">
+            <input class='col-9' type="text" placeholder="radius" id="inputRadius">
             <button class="btn btn-secondary" type="button" id="addCircle">Add Circle</button>
         </div>
         <div class="isoceles-right-triangle">
@@ -83,7 +83,9 @@
             </form>
         </span>
     </div>
-    <div class="shapeCanvas" id="shape-canvas"></div>
+    <div class="shapeCanvas" id="shape-canvas">
+        <canvas class="canvas"></canvas>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
